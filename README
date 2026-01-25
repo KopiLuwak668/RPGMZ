@@ -6,9 +6,8 @@ RPGツクールMZ向けの自作プラグインを公開しているリポジト
 
 | プラグイン名 | リンク | 特徴 |
 | :--- | :--- | :--- |
-| **KP_InputAlphabet** | [jsファイル](./KP_InputAlphabet/KP_InputAlphabet.js/KP_InputAlphabet.js) | 数値入力の仕組みでアルファベットを扱えます。 |
-| **KP_LightsOutMZ** | [jsファイル](./KP_LightsOutMZ/KP_LightsOutMZ.js/KP_LightsOutMZ.js) | 定番の消灯パズル。 |
-
+- [KP_InputAlphabet.js](./KP_InputAlphabet/KP_InputAlphabet.js/KP_InputAlphabet.js)
+- [KP_LightsOutMZ.js](./KP_LightsOutMZ/KP_LightsOutMZ.js/KP_LightsOutMZ.js)
 ## 共通の利用規約
 - **ライセンス**: MIT License（改変・商用利用OK）
 - **クレジット**: 必須ではありませんが、記載いただけると喜びます。

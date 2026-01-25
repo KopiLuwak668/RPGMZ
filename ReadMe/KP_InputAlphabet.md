@@ -1,12 +1,12 @@
 # KP_InputAlphabet.js
 RPGツクールMZ向けの「ダイヤル式アルファベット入力」プラグインです。
 
-# [ダウンロード](./KP_InputAlphabet/KP_InputAlphabet.js) 
+# [ダウンロード](./KopiLuwak668/RPGMZ/blob/main/KP_InputAlphabetMZ.js) 
 
 # 特徴
 - 
 - 
-- 複数のパズルを個別の「識別名」で管理可能
+- 
 
 # 【概要】
   横並びのダイヤルを回すようにアルファベットや数字を入力します。

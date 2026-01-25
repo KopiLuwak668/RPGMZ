@@ -1,4 +1,4 @@
-# KP_InputAlphabet.js
+# KP_InputAlphabetMZ.js
 RPGツクールMZ向けの「ダイヤル式アルファベット入力」プラグインです。
 
 

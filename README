@@ -1,0 +1,14 @@
+# KopiLuwak's RPG Maker MZ Plugins
+
+RPGツクールMZ向けの自作プラグインを公開しているリポジトリです。
+
+## プラグイン一覧 (Index)
+
+| プラグイン名 | フォルダ | 説明 |
+| :--- | :--- | :--- |
+| **KP_InputAlphabet** | [リンク](./KP_InputAlphabet/) | ダイヤル式のアルファベット入力を追加します。 |
+| **KP_LightsOutMZ** | [リンク](./KP_LightsOutMZ/) |  |
+
+## 共通の利用規約
+- **ライセンス**: MIT License（改変・商用利用OK）
+- **クレジット**: 必須ではありませんが、記載いただけると喜びます。

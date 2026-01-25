@@ -6,8 +6,8 @@ RPGツクールMZ向けの自作プラグインを公開しているリポジト
 
 | プラグイン名 | リンク |
 | :--- | :--- |
-| **KP_InputAlphabet** | [jsファイル](https://github.com/KopiLuwak668/RPGMZ/blob/main/KP_InputAlphabet/KP_InputAlphabet.js/KP_InputAlphabet.js.js) |
-| **KP_LightsOutMZ** | [jsファイル](https://github.com/KopiLuwak668/RPGMZ/blob/main/KP_LightsOutMZ/KP_LightsOutMZ.js) |
+[jsファイル](https://github.com/KopiLuwak668/RPGMZ/blob/main/KP_InputAlphabet/KP_InputAlphabet.js/KP_InputAlphabet.js.js) 
+[jsファイル](https://github.com/KopiLuwak668/RPGMZ/blob/main/KP_LightsOutMZ/KP_LightsOutMZ.js) 
 This site was built using [GitHub Pages](https://pages.github.com/).
 For more detailed information on the requirements of URI fragments, see RFC 3986: Uniform Resource Identifier (URI): Generic Syntax, Section 3.5.
 ## 利用規約

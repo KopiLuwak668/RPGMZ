@@ -8,6 +8,7 @@ RPGツクールMZ向けの自作プラグインを公開しているリポジト
 | :--- | :--- | :--- |
 | **KP_InputAlphabet** | [リンク](./KP_InputAlphabet/) | ダイヤル式のアルファベット入力を追加します。 |
 | **KP_LightsOutMZ** | [リンク](./KP_LightsOutMZ/) |  |
+### [KP_InputAlphabet](./KP_InputAlphabet/KP_InputAlphabet.js)
 
 ## 共通の利用規約
 - **ライセンス**: MIT License（改変・商用利用OK）

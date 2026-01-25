@@ -4,11 +4,10 @@ RPGツクールMZ向けの自作プラグインを公開しているリポジト
 
 ## プラグイン一覧 (Index)
 
-| プラグイン名 | フォルダ | 説明 |
+| プラグイン名 | リンク | 特徴 |
 | :--- | :--- | :--- |
-| **KP_InputAlphabet** | [リンク](./KP_InputAlphabet/KP_InputAlphabet.js)) | ダイヤル式のアルファベット入力を追加します。 |
-| **KP_LightsOutMZ** | [リンク](./KP_LightsOutMZ/) |  |
-### [KP_InputAlphabet](./KP_InputAlphabet/KP_InputAlphabet.js)
+| **KP_InputAlphabet** | [jsファイル](./KP_InputAlphabet/KP_InputAlphabet.js) | 数値入力の仕組みでアルファベットを扱えます。 |
+| **KP_LightsOutMZ** | [jsファイル](./KP_LightsOutMZ/KP_LightsOutMZ.js) | 識別名(ID)管理で、複数のパズルを並行運用可能です。 |
 
 ## 共通の利用規約
 - **ライセンス**: MIT License（改変・商用利用OK）

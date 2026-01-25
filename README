@@ -3,12 +3,13 @@
 RPGツクールMZ向けの自作プラグインを公開しているリポジトリです。
 
 ## プラグイン一覧 (Index)
-
+（←ここに空行を入れる）
 | プラグイン名 | リンク | 特徴 |
 | :--- | :--- | :--- |
-| **KP_InputAlphabet** | [jsファイル](./KP_InputAlphabet/KP_InputAlphabet.js) | 数値入力の仕組みでアルファベットを扱えます。識別名で個別管理が可能です。 |
-| **KP_LightsOutMZ** | [jsファイル](./KP_LightsOutMZ/KP_LightsOutMZ.js) | 定番の消灯パズル。こちらも識別名による独立管理に対応しています。 |
-
+| **KP_InputAlphabet** | [jsファイル](./KP_InputAlphabet/KP_InputAlphabet.js) | 数値入力の仕組みでアルファベットを扱えます。 |
+| **KP_LightsOutMZ** | [jsファイル](./KP_LightsOutMZ/KP_LightsOutMZ.js) | 定番の消灯パズル。 |
+（←ここに空行を入れる）
+## 共通の利用規約
 ## 共通の利用規約
 - **ライセンス**: MIT License（改変・商用利用OK）
 - **クレジット**: 必須ではありませんが、記載いただけると喜びます。

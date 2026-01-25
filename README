@@ -5,10 +5,10 @@ RPGツクールMZ向けの自作プラグインを公開しているリポジト
 ## プラグイン一覧 (Index)
 
 | プラグイン名 | リンク |
-| :--- | :--- |
-[jsファイル](https://github.com/KopiLuwak668/RPGMZ/blob/main/KP_InputAlphabet/KP_InputAlphabet.js) 
-[jsファイル](https://github.com/KopiLuwak668/RPGMZ/blob/main/KP_LightsOutMZ/KP_LightsOutMZ.js) 
-[jsファイル](https://github.com/KopiLuwak668/RPGMZ/blob/main/KP_InputAlphabet/KP_InputAlphabet.js)
+| --- | --- |
+| KP_InputAlphabet | [jsファイル](https://github.com/KopiLuwak668/RPGMZ/blob/main/KP_InputAlphabet/KP_InputAlphabet.js) |
+| KP_LightsOutMZ | [jsファイル](https://github.com/KopiLuwak668/RPGMZ/blob/main/KP_LightsOutMZ/KP_LightsOutMZ.js) |
+
 
 ## 利用規約
 - **ライセンス**: MIT License

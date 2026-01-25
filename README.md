@@ -6,7 +6,7 @@ RPGツクールMZ向けの自作プラグインを公開しているリポジト
 
 | プラグイン名 |  リンク | 特徴 |
 | :--- | :--- | :--- |
-| **KP_InputAlphabet** | [link](./KopiLuwak668/RPGMZ/blob/main/ReadMe/KP_InputAlphabet.md) | 数値入力の仕組みでアルファベットを扱えます。識別名で個別管理が可能です。 |
+| **KP_InputAlphabet** | [KP_InputAlphabet](./KopiLuwak668/RPGMZ/blob/main/ReadMe/KP_InputAlphabet.md) | 数値入力の仕組みでアルファベットを扱えます。識別名で個別管理が可能です。 |
 | **KP_LightsOutMZ** | [jsファイル](./KP_LightsOutMZ/KP_LightsOutMZ.js) | 定番の消灯パズル。こちらも識別名による独立管理に対応しています。 |
 
 ## 共通の利用規約

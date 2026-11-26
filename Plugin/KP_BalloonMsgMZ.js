@@ -207,10 +207,13 @@
  * -----------------------------------------------------------------
  *   Consecutive Show Text
  * -----------------------------------------------------------------
- *  Show Text commands placed one after another are joined into one
- *  balloon. The face, name, background and position of the first
+ *  When Height (lines) is set to -1 or 5 or higher in Enable Balloon
+ *  Mode (Custom), consecutive Show Text commands are joined into
+ *  one balloon. The face, name, background and position of the first
  *  one are used. To start a new balloon, leave the last line of a
  *  Show Text empty. The empty line itself is not shown.
+ *  When using Enable Balloon Mode (Default) or when Height (lines)
+ *  is 0 to 4, Show Text commands are not joined.
  *  
  * -----------------------------------------------------------------
  *   Choices
@@ -314,8 +317,8 @@
  * @arg showTail
  * @type boolean
  * @default true
- * @text しっぽを表示
- * @desc 吹き出しのしっぽを表示します。
+ * @text テールを表示
+ * @desc 吹き出しのテールを表示します。
  *
  * @command enableBalloon
  * @text 吹き出しモード開始（詳細）
@@ -330,8 +333,8 @@
  * @arg showTail
  * @type boolean
  * @default true
- * @text しっぽを表示
- * @desc 吹き出しのしっぽを表示します。
+ * @text テールを表示
+ * @desc 吹き出しのテールを表示します。
  *
  * @arg position
  * @type select
@@ -351,7 +354,7 @@
  * @min -9999
  * @max 9999
  * @default 0
- * @text Xのずらし量
+ * @text Xのオフセット
  * @desc マイナスで左、プラスで右にずらします。
  *
  * @arg offsetY
@@ -359,7 +362,7 @@
  * @min -9999
  * @max 9999
  * @default -16
- * @text Yのずらし量
+ * @text Yのオフセット
  * @desc マイナスで上（上・画面中央のとき）。下のときは自動で逆になります。
  *
  * @arg fontSize
@@ -454,13 +457,13 @@
  *  最後に「終了」のコマンドを置く必要はありません。
  *  並列処理のイベントや、コモンイベントの呼び出しでは元に戻りません。
  *  
- *  「標準」で決めるのは、対象キャラクターIDとしっぽの表示だけです。
+ *  「標準」で決めるのは、対象キャラクターIDとテールの表示だけです。
  *  ほかは初期値を使います。「詳細」では、下の項目をすべて決めます。
  *  
  *    対象キャラクターID   -1 = プレイヤー、0 = このイベント、
  *                         1以上 = イベントID。\V[n] で変数 n の
  *                         値をIDとして使います。
- *    しっぽを表示         キャラクターを指すしっぽを描きます。
+ *    テールを表示         キャラクターを指すテールを描きます。
  *    表示位置             自動 / 上 / 下 / 画面中央。
  *                         自動：キャラクターがプレイヤーより下に
  *                         いる（上から話しかけた）ときは下、それ
@@ -468,9 +471,9 @@
  *                         出します。
  *                         画面中央：画面の真ん中に出します。話し手
  *                         と関係のないお知らせ向けです。X / Y の
- *                         ずらし量は真ん中からのずれになります
+ *                         オフセットは真ん中からのずれになります
  *                         （Y はプラスで下）。
- *    X / Y のずらし量     ピクセル単位でずらします。Y は「上」の
+ *    X / Y のオフセット     ピクセル単位でずらします。Y は「上」の
  *                         とき上向きに測り、「下」のときは逆に
  *                         なります。
  *    文字サイズの増減     データベース > システム2 の文字サイズ
@@ -508,10 +511,14 @@
  * -----------------------------------------------------------------
  *   続けて置いた「文章の表示」
  * -----------------------------------------------------------------
- *  続けて置いた「文章の表示」は、1つの吹き出しにまとめて表示
- *  します。顔グラフィック・名前・背景・位置は、1つ目のものを
- *  使います。吹き出しを分けたいときは、「文章の表示」の最後の
- *  行を空行にしてください。その空行は表示されません。
+ *  「吹き出しモード開始（詳細）」で高さ（行数）を -1 または
+ *  5 以上に設定しているとき、続けて置いた「文章の表示」を
+ *  1つの吹き出しにまとめて表示します。顔グラフィック・名前・
+ *  背景・位置は、1つ目のものを使います。吹き出しを分けたいときは、
+ *  「文章の表示」の最後の行を空行にしてください。その空行は
+ *  表示されません。
+ *  「吹き出しモード開始（標準）」のときや、高さ（行数）が
+ *  0〜4 のときは、文章は結合されません。
  *  
  * -----------------------------------------------------------------
  *   選択肢
@@ -552,7 +559,7 @@
  *  < > をそのまま表示したいときは、<<このように>> 2つ重ねると
  *  <このように> と表示されます。
  *  
- *  吹き出し・しっぽ・選択肢の窓の色は、このファイルのコードの
+ *  吹き出し・テール・選択肢の窓の色は、このファイルのコードの
  *  先頭で変えられます。
  * 
  * =================================================================
@@ -601,11 +608,11 @@
     'use strict';
 
     const pluginName = "KP_BalloonMsgMZ";
-    // 文字の下の座布団と、しっぽの色（しっぽはウィンドウスキンの枠と中の色に合わせる）
+    // 文字の下の座布団と、テールの色（テールはウィンドウスキンの枠と中の色に合わせる）
     const CFG_B = {
         textBack: 'rgba(0, 0, 0, 0.4)',       // 文字と名前の下の座布団
-        tailFill: 'rgba(255, 255, 255, 0.9)', // しっぽの中
-        tailEdge: 'rgba(124, 183, 255, 0.9)', // しっぽの縁
+        tailFill: 'rgba(255, 255, 255, 0.9)', // テールの中
+        tailEdge: 'rgba(124, 183, 255, 0.9)', // テールの縁
     };
     // 選択肢の行の色（選んでいる行と、ほかの行。上から下へのグラデーション）
     const CHOICE_STYLE = {
@@ -836,6 +843,8 @@
 
     // 吹き出しモードでは、続けて置いた文章を1つの吹き出しにまとめる（最後の行が空行なら、そこで区切る。空行は表示しない）
     Game_Interpreter.prototype.rlsMergeFollowingText = function() {
+        const h = $gameSystem ? ($gameSystem._balloonH || 0) : 0;
+        if (h !== -1 && h < 5) return;
         for (;;) {
             const texts = $gameMessage._texts;
             if (texts.length > 0 && texts[texts.length - 1] === "") {
@@ -1152,7 +1161,7 @@
         this.x = Math.max(minX, Math.min(targetX, maxX));
         this.y = Math.max(minY, Math.min(targetY, maxY));
 
-        // しっぽの向き（Center のときは、話し手が吹き出しの真ん中より下なら下向き、上なら上向き）
+        // テールの向き（Center のときは、話し手が吹き出しの真ん中より下なら下向き、上なら上向き）
         const side = this._currentBalloonPosType === 3 ? (charY - spriteHeight > this.y + this.height / 2 ? 1 : 2) : this._currentBalloonPosType;
         this._rlsTailSide = side;
         let tipAbsY = (side === 1) ? charY - spriteHeight : charY;
@@ -1361,7 +1370,8 @@
         const m = line.match(/[\x10\x12]/);
         if (m) align = m[0] === '\x10' ? 1 : 2;
         if (align === 0) return;
-        const space = Math.max(0, this.innerWidth - textState.startX - this.rlsMeasureText(line).width);
+        const right = this._rlsWrapW > 0 ? this._rlsWrapW : this.innerWidth;
+        const space = Math.max(0, right - textState.startX - this.rlsMeasureText(line).width);
         textState.x = textState.startX + Math.floor(align === 1 ? space / 2 : space);
     };
 

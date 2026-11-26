@@ -4,7 +4,7 @@ RPGツクールMZの「数値入力の処理」の代わりに、ダイヤルを
 
 ![サンプル](../gif/KP_DialInputMZ_sample01.gif)<br>
 
-# [ダウンロード](../Plugins/KP_DialInputMZ.js)<br>
+# [ダウンロード](../Plugin/KP_DialInputMZ.js)<br>
 
 
 # 導入手順

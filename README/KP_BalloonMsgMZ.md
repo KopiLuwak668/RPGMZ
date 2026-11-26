@@ -4,7 +4,7 @@ RPGツクールMZの「文章の表示」「選択肢の表示」を、キャラ
 
 ![サンプル](../gif/BalloonMsg_sample01.gif)<br>
 
-# [ダウンロード](../Plugins/KP_BalloonMsgMZ.js)<br>
+# [ダウンロード](../Plugin/KP_BalloonMsgMZ.js)<br>
 
 
 # 導入手順
